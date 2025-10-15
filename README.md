@@ -5,8 +5,10 @@ A simple terminal ai agent to help with terminal commands
 ## Project Setup
 
 - install uv if you don't have it yet
-`curl -LsSf https://astral.sh/uv/install.sh | sh`
-`uv --version`
+```
+curl -LsSf https://astral.sh/uv/install.sh | sh
+uv --version
+```
 
 - clone the project
 ```
@@ -22,8 +24,8 @@ uv sync
 
 - run
 ```
-uv run main.py list all md files
-uv run main.py what is the name of my os
+uv run ai.py list all md files
+uv run ai.py what is the name of my os
 ```
 
 
@@ -37,7 +39,10 @@ uv build
 uv tool install dist/ai-0.1.0-py3-none-any.whl
 uv tool list
 ```
-
+- test installed ai tool
+```
+ai how much ram do i have
+```
 
 - uninstall ai tool
 ```
