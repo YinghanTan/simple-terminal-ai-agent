@@ -9,7 +9,17 @@ from dotenv import load_dotenv
 from pydantic_ai import Agent
 from pydantic_ai.models.google import GoogleModel
 
+from pydantic_ai.models.openai import OpenAIChatModel
+from pydantic_ai.providers.deepseek import DeepSeekProvider
+
 load_dotenv()
+
+llm = os.getenv("LLM_MODEL", "deepseek-coder")
+
+model = OpenAIChatModel(
+    llm,
+    provider=DeepSeekProvider(api_key=os.getenv("DEEPSEEK_API_KEY")),
+)
 
 SYSTEM_PROMPT = dedent(
     """\
@@ -38,9 +48,9 @@ class Answer:
     failure: str | None
 
 
-llm = os.getenv("LLM_MODEL", "gemini-2.0-flash")
 agent = Agent(
-    model=GoogleModel(llm),
+    # model=GoogleModel("gemini-2.0-flash"),
+    model,
     system_prompt=SYSTEM_PROMPT,
     output_type=Answer,
 )

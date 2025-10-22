@@ -42,6 +42,9 @@ uv tool list
 - test installed ai tool
 ```
 ai how much ram do i have
+ai find out how much space i have left
+ai tar gz README.md
+ai show a nice list of git commits with graphs and dates
 ```
 
 - uninstall ai tool
