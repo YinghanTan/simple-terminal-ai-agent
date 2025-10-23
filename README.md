@@ -2,6 +2,7 @@
 
 A simple terminal ai agent to help with terminal commands
 
+
 ## Project Setup
 
 - install uv if you don't have it yet
@@ -16,11 +17,15 @@ git clone git@github.com:YinghanTan/simple-terminal-ai-agent.git
 cd simple-terminal-ai-agent
 ```
 
+- create .env file from example.env by adding your DEEPSEEK_API_KEY or GEMINI_API_KEY
+    -  Instructions to generate GEMINI_API_KEY - https://www.youtube.com/watch?v=o8iyrtQyrZM
+    -  Instructions to generate DEEPSEEK_API_KEY - https://www.youtube.com/watch?v=CpZFf6JkHgY
+
+
 - install dependencies
 ```
 uv sync
 ```
-- create .env file from example.env by adding your DEEPSEEK_API_KEY
 
 - run
 ```
